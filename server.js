@@ -3,7 +3,7 @@ import router from './router.js';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-const whitelist = ['https://todos-c3yp.onrender.com', 'https://todos-api-x88y.onrender.com'];
+const whitelist = ['https://shake0707.github.io/todos/'];
 
 const app = express();
 
