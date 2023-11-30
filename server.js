@@ -3,7 +3,10 @@ import router from './router.js';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-const whitelist = ['https://shake0707.github.io/todos/'];
+const whitelist = [
+    "https://todos-api-x88y.onrender.com/api/todos",
+    "https://shake0707.github.io/todos/"
+];
 
 const app = express();
 
@@ -23,6 +26,7 @@ const corsOptions = {
             callback(new Error('Not allowed by CORS'));
         }
     },
+    optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
