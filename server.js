@@ -15,12 +15,6 @@ const DB_URL = "mongodb+srv://shaxriyor:IWDnGduokssZUpUG@todo.fqlpkjf.mongodb.ne
 
 app.use(express.json());
 
-app.enableCors({
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    allowedHeaders: "Content-Type, Accept",
-});
-
 app.options('*', cors());
 
 const corsOptions = {
