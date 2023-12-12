@@ -1,6 +1,7 @@
 const Todo = require('./Todo.js');
 
 class TodoConroller {
+    // GET ALL
     async all(req, res) {
         const filter = req.query;
         try {
@@ -11,6 +12,7 @@ class TodoConroller {
         }
     }
 
+    // CRETE
     async create(req, res) {
         try {
             const todo = await Todo.create(req.body);
@@ -20,6 +22,7 @@ class TodoConroller {
         }
     }
 
+    // UPDATE
     async update(req, res) {
         if (!req.params.id) throw new Error('Id not found!');
         try {
@@ -30,6 +33,7 @@ class TodoConroller {
         }
     }
 
+    // DELETE
     async delete(req, res) {
         // DELETE MANY
         if (req.url.endsWith('complated')) {
