@@ -1,5 +1,5 @@
-import Router from 'express';
-import TodoController from './TodoController.js';
+const Router = require('express');
+const TodoController = require('./TodoController.js');
 
 const router = new Router();
 
