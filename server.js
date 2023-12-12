@@ -39,7 +39,11 @@ const consoleColor = "\x1b[34m";
 
 async function startApp() {
     try {
-        await mongoose.connect(DB_URL, { useUnifiedTopology: true, useNewUrlParser: true });
+        await mongoose.connect(DB_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            family: 4
+        });
         app.listen(PORT, () => console.log(consoleColor, 'Server is started'));
     } catch (e) {
         console.log(e);
